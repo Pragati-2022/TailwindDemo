@@ -1,1 +1,14 @@
+<div class="flex justify-between mb-6">
+    <p class="text-bold text-xl">Sales Value</p>
+    <div class="flex">
+        <button (click)="isMonth = true" (click)=" onOpenNewChart()"
+            class="mr-2 bg-slate-700 hover:bg-slate-900 text-white py-1 px-2  rounded">
+            Month
+        </button>
+        <button (click)="isMonth = false" (click)=" onOpenNewChart()"
+            class="bg-slate-700 hover:bg-slate-900 text-white py-1 px-2  rounded">
+            Year
+        </button>
+    </div>
+</div>
 <canvas #lineCanvas style="height:15vh; width:20vw"></canvas>
