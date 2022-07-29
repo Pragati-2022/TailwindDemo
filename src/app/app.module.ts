@@ -9,6 +9,10 @@ import { FirstPartComponent } from './pages/dashboard/first-part/first-part.comp
 import { SecondChartPartComponent } from './pages/dashboard/second-chart-part/second-chart-part.component';
 import { LineChartComponent } from './pages/dashboard/second-chart-part/line-chart/line-chart.component';
 import { BarChartComponent } from './pages/dashboard/second-chart-part/bar-chart/bar-chart.component';
+import { GuiGridModule } from '@generic-ui/ngx-grid';
+import { PageVisitesTableComponent } from './pages/dashboard/second-chart-part/page-visites-table/page-visites-table.component';
+import { SocialTrafficTableComponent } from './pages/dashboard/second-chart-part/social-traffic-table/social-traffic-table.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,10 +22,13 @@ import { BarChartComponent } from './pages/dashboard/second-chart-part/bar-chart
     SecondChartPartComponent,
     LineChartComponent,
     BarChartComponent,
+    PageVisitesTableComponent,
+    SocialTrafficTableComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    GuiGridModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
