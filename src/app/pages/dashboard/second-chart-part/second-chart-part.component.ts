@@ -8,4 +8,6 @@ import { Component, OnInit } from '@angular/core';
 export class SecondChartPartComponent implements OnInit {
   constructor() {}
   ngOnInit(): void {}
+
+  
 }
