@@ -12,6 +12,7 @@ import { BarChartComponent } from './pages/dashboard/second-chart-part/bar-chart
 import { GuiGridModule } from '@generic-ui/ngx-grid';
 import { PageVisitesTableComponent } from './pages/dashboard/second-chart-part/page-visites-table/page-visites-table.component';
 import { SocialTrafficTableComponent } from './pages/dashboard/second-chart-part/social-traffic-table/social-traffic-table.component';
+import { MapsComponent } from './pages/maps/maps.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { SocialTrafficTableComponent } from './pages/dashboard/second-chart-part
     BarChartComponent,
     PageVisitesTableComponent,
     SocialTrafficTableComponent,
+    MapsComponent,
   ],
   imports: [
     BrowserModule,
