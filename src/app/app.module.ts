@@ -13,6 +13,7 @@ import { GuiGridModule } from '@generic-ui/ngx-grid';
 import { PageVisitesTableComponent } from './pages/dashboard/second-chart-part/page-visites-table/page-visites-table.component';
 import { SocialTrafficTableComponent } from './pages/dashboard/second-chart-part/social-traffic-table/social-traffic-table.component';
 import { MapsComponent } from './pages/maps/maps.component';
+import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { MapsComponent } from './pages/maps/maps.component';
     PageVisitesTableComponent,
     SocialTrafficTableComponent,
     MapsComponent,
+    ContactUsComponent,
   ],
   imports: [
     BrowserModule,
