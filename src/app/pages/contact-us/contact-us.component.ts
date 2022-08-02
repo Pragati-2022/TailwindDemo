@@ -7,6 +7,7 @@ import {
   GuiSearching,
   GuiSorting,
 } from '@generic-ui/ngx-grid';
+import { Contact } from 'src/app/interfaces/conatcts';
 import { CallApiService } from 'src/app/services/callApi/call-api.service';
 import { CommonService } from 'src/app/services/common/common.service';
 
@@ -23,8 +24,7 @@ export class ContactUsComponent implements OnInit {
   }
 
   getColumns(){
-    this.callApiService.getAll('assets/fakeData/contacts.json').subscribe((data : any) => {
-      console.log(data);
+    this.callApiService.getAll('assets/fakeData/contacts.json').subscribe((data : Contact) => {
       this.columns = data.columns;
       this.source = data.source;
     })
