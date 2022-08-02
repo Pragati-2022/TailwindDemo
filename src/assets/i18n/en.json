@@ -1,0 +1,36 @@
+{
+  "BUTTON": {
+    "SEE_ALL": "See All",
+    "MONTH": "Month",
+    "YEAR": "Year"
+  },
+  "TITLE": {
+    "ARGON" : "argon",
+    "DASHBOARD": "DashBoard",
+    "ICONS": "Icons",
+    "MAPS": "Maps",
+    "USER_PROFILE": "User Profile",
+    "CONTACT_US": "Conatct Us",
+    "LOGIN": "Login",
+    "PAGE_VIEW": "Page View",
+    "DOCUMENTATION": "DOCUMENTATION",
+    "GETTING_STARTED": "Getting Started",
+    "FOUNDATION": "Foundation",
+    "COMPONENTS": "Components",
+    "SALES_VALUE" : "Sales Value",
+    "PAGE_VISITES" : "Page Visites",
+    "SOCIAL_TRAFFIC" : "Social Traffic",
+    "TOTAL_ORDERS" : "Total Orders",
+    "SALES" : "SALES"
+  },
+
+  "MESSAGE": {
+    "SALES_MSG": "Lorem ipsum dolor sit.",
+    "sourceEmpty": "There are no items to show.",
+    "pagingItemsPerPage": "Items per page:",
+    "pagingOf": "of",
+    "pagingNextPage": "Next",
+    "pagingPrevPage": "Prev",
+    "pagingNoItems": "There is no items."
+  }
+}
