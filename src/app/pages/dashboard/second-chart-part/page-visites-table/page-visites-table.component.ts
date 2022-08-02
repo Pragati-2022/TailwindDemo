@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GuiColumn } from '@generic-ui/ngx-grid';
+import { Dashboard } from 'src/app/interfaces/dashboard';
 import { CallApiService } from 'src/app/services/callApi/call-api.service';
 
 @Component({
@@ -15,8 +16,7 @@ export class PageVisitesTableComponent implements OnInit {
   }
 
   getColumns(){
-    this.callApiService.getAll('assets/fakeData/dashboard.json').subscribe((data : any) => {
-      console.log(data);
+    this.callApiService.getAll('assets/fakeData/dashboard.json').subscribe((data : Dashboard) => {
       this.columns = data.page_visites.columns;
       this.source = data.page_visites.source;
     })
