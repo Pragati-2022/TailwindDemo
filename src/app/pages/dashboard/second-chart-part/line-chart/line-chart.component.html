@@ -1,13 +1,13 @@
 <div class="flex justify-between mb-6">
-    <p class="text-bold text-xl">Sales Value</p>
+    <p class="text-bold text-xl">{{ 'TITLE.SALES_VALUE' | translate }}</p>
     <div class="flex">
-        <button (click)="isMonth = true" (click)=" onOpenNewChart()"
+        <button (click)="commonService.isMonth = true" (click)=" onOpenNewChart()"
             class="mr-2 bg-slate-700 hover:bg-slate-900 text-white py-1 px-2  rounded">
-            Month
+            {{ 'BUTTON.MONTH' | translate }}
         </button>
-        <button (click)="isMonth = false" (click)=" onOpenNewChart()"
+        <button (click)="commonService.isMonth = false" (click)=" onOpenNewChart()"
             class="bg-slate-700 hover:bg-slate-900 text-white py-1 px-2  rounded">
-            Year
+            {{ 'BUTTON.YEAR' | translate }}
         </button>
     </div>
 </div>
