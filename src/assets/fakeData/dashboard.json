@@ -63,8 +63,7 @@
       },
       {
         "header": "",
-        "field": "age",
-        "view": ""
+        "field": "age"
       }
     ],
     "source": [

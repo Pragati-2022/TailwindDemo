@@ -5,12 +5,16 @@
           "field": "name"
         },
         {
-          "header": "Emails",
+          "header": "Email",
           "field": "email"
         },
         {
           "header": "Phone",
           "field": "phone"
+        },
+        {
+          "headr": "Owner",
+          "field" : "owner"
         }
       ],
 
@@ -27,22 +31,38 @@
         {
           "name": "John",
           "email": "john@gmail.com",
-          "phone": "9067543218"
+          "phone": "9067543218",
+          "owner": {
+            "firstName": "sid",
+            "lastName": "Patel"
+          }
         },
         {
           "name": "Sid",
           "email": "sid@gmail.com",
-          "phone": "7864259053"
+          "phone": "7864259053",
+          "owner": {
+            "firstName": "Mihir",
+            "lastName": "Patel"
+          }
         },
         {
           "name": "Pragati",
           "email": "pragati@gmail.com",
-          "phone": "4679854216"
+          "phone": "4679854216",
+          "owner": {
+            "firstName": "Nikul",
+            "lastName": "Suvagiya"
+          }
         },
         {
           "name": "Eve",
           "email": "eve@gmail.com",
-          "phone": "9865412345"
+          "phone": "9865412345",
+          "owner": {
+            "firstName": "Bruce",
+            "lastName": "Wayne"
+          }
         }
       ]
 }
