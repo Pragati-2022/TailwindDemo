@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonService } from 'src/app/services/common/common.service';
 
 @Component({
   selector: 'app-side-bar',
@@ -6,13 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./side-bar.component.scss']
 })
 export class SideBarComponent implements OnInit {
-  isOpen = true;
   
-  constructor() { }
+  constructor(public commonService : CommonService) { }
 
   ngOnInit(): void {
     if(window.innerWidth < 450){
-      this.isOpen = false;
+      this.commonService.isOpen = false;
     }
   }
 
