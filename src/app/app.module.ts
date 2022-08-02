@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { FirstPartComponent } from './pages/dashboard/first-part/first-part.component';
 import { SecondChartPartComponent } from './pages/dashboard/second-chart-part/second-chart-part.component';
@@ -14,11 +13,18 @@ import { PageVisitesTableComponent } from './pages/dashboard/second-chart-part/p
 import { SocialTrafficTableComponent } from './pages/dashboard/second-chart-part/social-traffic-table/social-traffic-table.component';
 import { MapsComponent } from './pages/maps/maps.component';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
+import { ComponentModule } from './components/component.module';
+import { PipeModule } from './pipe/pipe.module';
 
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+export function createTranslateLoader(http: HttpClient): TranslateHttpLoader {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
 @NgModule({
   declarations: [
     AppComponent,
-    SideBarComponent,
     DashboardComponent,
     FirstPartComponent,
     SecondChartPartComponent,
@@ -32,7 +38,17 @@ import { ContactUsComponent } from './pages/contact-us/contact-us.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: createTranslateLoader,
+        deps: [HttpClient],
+      },
+    }),
+    HttpClientModule,
     GuiGridModule,
+    ComponentModule,
+    PipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
