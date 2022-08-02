@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GuiColumn } from '@generic-ui/ngx-grid';
+import { CallApiService } from 'src/app/services/callApi/call-api.service';
 
 @Component({
   selector: 'app-page-visites-table',
@@ -7,59 +8,21 @@ import { GuiColumn } from '@generic-ui/ngx-grid';
   styleUrls: ['./page-visites-table.component.scss'],
 })
 export class PageVisitesTableComponent implements OnInit {
-  constructor() {}
+  constructor(private callApiService : CallApiService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.getColumns();
+  }
 
-  columns: Array<GuiColumn> = [
-    {
-      header: 'Name',
-      field: 'name',
-    },
-    {
-      header: 'Job',
-      field: 'job',
-    },
-    {
-      header: 'Age',
-      field: 'age',
-    },
-    {
-      header: 'Phone',
-      field: 'phone',
-    },
-  ];
+  getColumns(){
+    this.callApiService.getAll('assets/fakeData/dashboard.json').subscribe((data : any) => {
+      console.log(data);
+      this.columns = data.page_visites.columns;
+      this.source = data.page_visites.source;
+    })
+  }
 
-  source: Array<any> = [
-    {
-      name: 'Brad',
-      job: 'programmer',
-      age: '40',
-      phone: '8817678978',
-    },
-    {
-      name: 'John',
-      job: 'athlete',
-      age: '22',
-      phone: '8817678978',
-    },
-    {
-      name: 'John',
-      job: 'athlete',
-      age: '22',
-      phone: '8817678978',
-    },
-    {
-      name: 'John',
-      job: 'athlete',
-      age: '22',
-      phone: '8817678978',
-    },
-    {
-      name: 'Eve',
-      job: 'artist',
-      age: '25',
-      phone: '8817678978',
-    },
-  ];
+  columns: Array<GuiColumn> = [];
+
+  source: Array<any> = [];
 }
