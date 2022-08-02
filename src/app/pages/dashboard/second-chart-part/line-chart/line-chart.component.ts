@@ -6,6 +6,7 @@ import {
   ViewChild,
 } from '@angular/core';
 import Chart from 'chart.js/auto';
+import { CommonService } from 'src/app/services/common/common.service';
 
 @Component({
   selector: 'app-line-chart',
@@ -16,13 +17,12 @@ export class LineChartComponent implements OnInit, AfterViewInit {
   @ViewChild('lineCanvas') lineCanvas!: ElementRef;
   @ViewChild('lineCanvas') lineCanvas2!: ElementRef;
   lineChart: any;
-  isMonth = true;
 
   months = ['January', 'February', 'March', 'April', 'May'];
   monthsData = [65, 59, 80, 81, 56, 55, 40, 10, 5, 50, 10, 15];
   yearsData = [5, 16, 13, 40, 20, 25, 10, 30, 33, 35, 10, 15];
   years = ['2001', '2002', '2003', '2004', '2005'];
-  constructor() {}
+  constructor(public commonService : CommonService) {}
   ngOnInit(): void {}
 
   ngAfterViewInit(): void {
@@ -30,12 +30,10 @@ export class LineChartComponent implements OnInit, AfterViewInit {
   }
 
   lineChartMethod() {
-    console.log(this.isMonth);
-
     this.lineChart = new Chart(this.lineCanvas.nativeElement, {
       type: 'line',
       data: {
-        labels: this.isMonth ? this.months : this.years,
+        labels: this.commonService.isMonth ? this.months : this.years,
         datasets: [
           {
             label: 'Sell per week',
@@ -56,7 +54,7 @@ export class LineChartComponent implements OnInit, AfterViewInit {
             pointHoverBorderWidth: 2,
             pointRadius: 1,
             pointHitRadius: 10,
-            data: this.isMonth ? this.monthsData : this.yearsData,
+            data: this.commonService.isMonth ? this.monthsData : this.yearsData,
             spanGaps: false,
           },
         ],
