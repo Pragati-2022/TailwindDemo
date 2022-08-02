@@ -31,7 +31,7 @@ export class LineChartComponent implements OnInit, AfterViewInit {
 
   lineChartMethod() {
     this.lineChart = new Chart(this.lineCanvas.nativeElement, {
-      type: 'line',
+      type: this.constant.chartType.line ,
       data: {
         labels: this.commonService.isMonth ? this.constant.months : this.constant.years,
         datasets: [
