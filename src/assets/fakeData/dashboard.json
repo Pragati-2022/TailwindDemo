@@ -1,0 +1,98 @@
+{
+  "page_visites": {
+    "columns": [
+      {
+        "header": "Name",
+        "field": "name"
+      },
+      {
+        "header": "Job",
+        "field": "job"
+      },
+      {
+        "header": "Age",
+        "field": "age"
+      },
+      {
+        "header": "Phone",
+        "field": "phone"
+      }
+    ],
+    "source": [
+      {
+        "name": "Brad",
+        "job": "programmer",
+        "age": "40",
+        "phone": "8817678978"
+      },
+      {
+        "name": "John",
+        "job": "athlete",
+        "age": "22",
+        "phone": "8817678978"
+      },
+      {
+        "name": "John",
+        "job": "athlete",
+        "age": "22",
+        "phone": "8817678978"
+      },
+      {
+        "name": "John",
+        "job": "athlete",
+        "age": "22",
+        "phone": "8817678978"
+      },
+      {
+        "name": "Eve",
+        "job": "artist",
+        "age": "25",
+        "phone": "8817678978"
+      }
+    ]
+  },
+  "social_traffic": {
+    "columns": [
+      {
+        "header": "Name",
+        "field": "name"
+      },
+      {
+        "header": "Job",
+        "field": "job"
+      },
+      {
+        "header": "",
+        "field": "age",
+        "view": ""
+      }
+    ],
+    "source": [
+      {
+        "name": "Brad",
+        "job": "programmer",
+        "age": "40"
+      },
+      {
+        "name": "John",
+        "job": "athlete",
+        "age": "100"
+      },
+      {
+        "name": "John",
+        "job": "athlete",
+        "age": "79"
+      },
+      {
+        "name": "John",
+        "job": "athlete",
+        "age": "10"
+      },
+      {
+        "name": "Eve",
+        "job": "artist",
+        "age": "50"
+      }
+    ]
+  }
+}

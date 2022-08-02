@@ -1,0 +1,48 @@
+{
+    "columns" : [
+        {
+          "header": "Name",
+          "field": "name"
+        },
+        {
+          "header": "Emails",
+          "field": "email"
+        },
+        {
+          "header": "Phone",
+          "field": "phone"
+        }
+      ],
+
+      "source" : [
+        {
+          "name": "Brads",
+          "email": "brad@gmail.com",
+          "phone": "8817678978",
+          "owner": {
+            "firstName": "Bruce",
+            "lastName": "Wayne"
+          }
+        },
+        {
+          "name": "John",
+          "email": "john@gmail.com",
+          "phone": "9067543218"
+        },
+        {
+          "name": "Sid",
+          "email": "sid@gmail.com",
+          "phone": "7864259053"
+        },
+        {
+          "name": "Pragati",
+          "email": "pragati@gmail.com",
+          "phone": "4679854216"
+        },
+        {
+          "name": "Eve",
+          "email": "eve@gmail.com",
+          "phone": "9865412345"
+        }
+      ]
+}
