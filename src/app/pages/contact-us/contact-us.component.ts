@@ -7,6 +7,7 @@ import {
   GuiSearching,
   GuiSorting,
 } from '@generic-ui/ngx-grid';
+import { ConstantClass } from 'src/app/constants/constants';
 import { Contact } from 'src/app/interfaces/conatcts';
 import { CallApiService } from 'src/app/services/callApi/call-api.service';
 import { CommonService } from 'src/app/services/common/common.service';
@@ -17,47 +18,44 @@ import { CommonService } from 'src/app/services/common/common.service';
   styleUrls: ['./contact-us.component.scss'],
 })
 export class ContactUsComponent implements OnInit {
-  constructor(public commonService: CommonService, private callApiService : CallApiService) {}
+  public constant = ConstantClass;
+  
+  constructor(
+    public commonService: CommonService,
+    private callApiService: CallApiService
+  ) { }
 
   ngOnInit(): void {
     this.getColumns();
   }
 
-  getColumns(){
-    this.callApiService.getAll('assets/fakeData/contacts.json').subscribe((data : Contact) => {
-      this.columns = data.columns;
-      this.source = data.source;
-    })
+  getColumns() {
+    this.callApiService
+      .getAll('assets/fakeData/contacts.json')
+      .subscribe((data: Contact) => {
+        this.columns = data.columns;
+        this.columns.map((data: any) => {
+          const setMarge: any = ['owner'];
+
+          if (setMarge.includes(data.field.toLowerCase())) {
+            data.view = (owner: any) => {
+              return '<b>' + owner.firstName + ' ' + owner.lastName + '</b>';
+            };
+            data.matcher = (owner: any) => {
+              return owner.firstName + ' ' + owner.lastName;
+            };
+          }
+        });
+        this.source = data.source;
+      });
   }
   columns: Array<GuiColumn> = [];
 
-  source: Array<any> = []
+  source: Array<any> = [];
 
-  sorting: GuiSorting = {
-    enabled: true,
-    multiSorting: true,
-  };
+  sorting = this.constant.searching;
 
-  searching: GuiSearching = {
-    enabled: true,
-    placeholder: 'Search Here...',
-    // phrase: 'man',
-    // highlighting: true,
-  };
+  searching = this.constant.searching;
 
-  paging: GuiPaging = {
-    enabled: true,
-    page: 1,
-    pageSize: 3,
-    pageSizes: [2, 5, 3],
-    pagerTop: false,
-    pagerBottom: true,
-    display: GuiPagingDisplay.ADVANCED,
-  };
-
-  localization: GuiLocalization = {
-    translationResolver: (key: string, value: string) => {
-      return value;
-    },
-  };
+  paging = this.constant.paging;
 }
