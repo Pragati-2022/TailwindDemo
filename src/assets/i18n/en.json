@@ -29,6 +29,7 @@
     "FIRST_NAME" : "FirstName",
     "LAST_NAME" : "LastName",
     "EMAIL" : "email",
+    "PASSWORD" : "Password",
     "PHONE_NUMBER" : "PhoneNumber",
     "EDUCATION" : "Education",
     "EXPERIENCE" : "Experience",
