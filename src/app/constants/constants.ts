@@ -79,4 +79,5 @@ export class ConstantClass {
     },
   };
   static userProfileForm: FormGroup;
+  static loginForm: FormGroup;
 }
