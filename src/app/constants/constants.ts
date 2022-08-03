@@ -1,3 +1,4 @@
+import { FormGroup } from '@angular/forms';
 import {
   GuiPaging,
   GuiPagingDisplay,
@@ -77,4 +78,5 @@ export class ConstantClass {
       },
     },
   };
+  static userProfileForm: FormGroup;
 }
