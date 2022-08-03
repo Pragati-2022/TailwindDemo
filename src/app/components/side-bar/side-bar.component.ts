@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/services/auth/auth.service';
 import { CommonService } from 'src/app/services/common/common.service';
 
 @Component({
@@ -34,7 +35,7 @@ export class SideBarComponent implements OnInit {
       src: 'assets/icons/bricks.svg',
     },
     {
-      routerLink: '',
+      routerLink: 'login',
       title: 'TITLE.LOGIN',
       src: 'assets/icons/bricks.svg',
     },
