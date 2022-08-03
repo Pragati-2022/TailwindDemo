@@ -2,7 +2,8 @@
   "BUTTON": {
     "SEE_ALL": "See All",
     "MONTH": "Month",
-    "YEAR": "Year"
+    "YEAR": "Year",
+    "SAVE": "Save"
   },
   "TITLE": {
     "ARGON" : "argon",
@@ -24,13 +25,29 @@
     "SALES" : "SALES"
   },
 
+  "LABEL" : {
+    "FIRST_NAME" : "FirstName",
+    "LAST_NAME" : "LastName",
+    "EMAIL" : "email",
+    "PHONE_NUMBER" : "PhoneNumber",
+    "EDUCATION" : "Education",
+    "EXPERIENCE" : "Experience",
+    "CITY" : "City",
+    "STATE" : "State",
+    "ZIP" : "Zip"
+  },
+
   "MESSAGE": {
     "SALES_MSG": "Lorem ipsum dolor sit.",
-    "sourceEmpty": "There are no items to show.",
-    "pagingItemsPerPage": "Items per page:",
-    "pagingOf": "of",
-    "pagingNextPage": "Next",
-    "pagingPrevPage": "Prev",
-    "pagingNoItems": "There is no items."
+    "REQUIRED" : "is required!",
+    "NAME_MIN_LENGTH" : "at least 2 characters long!",
+    "EMAIL_PATTERN" : "is invalid!",
+    "NUMERIC_PATTERN" : "allow only numeric value!",
+    "PHONE_MIN_LENGTH" : "at least 10 characters long!",
+    "PHONE_MAX_LENGTH" : "length maximum is 10!",
+    "EXOERIENCE_MAX_LENGTH" : "length maximum is 2!",
+    "EXPERIENCE_MIN" : "is least 1 year!",
+    "ZIP_MIN_LENGTH" : "at least 4 characters long!",
+    "ZIP_MAX_LENGTH" : "length maximum is 8!"
   }
 }
