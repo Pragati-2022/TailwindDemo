@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { AuthService } from './services/auth/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,7 @@ import { TranslateService } from '@ngx-translate/core';
 export class AppComponent {
   title = 'TailwindDemo';
 
-  constructor(private translate: TranslateService) {
+  constructor(private translate: TranslateService, public authService : AuthService) {
     translate.setDefaultLang('en');
     translate.use('en');
   }
