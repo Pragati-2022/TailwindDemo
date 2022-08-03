@@ -24,7 +24,7 @@ export class SideBarComponent implements OnInit {
       src: 'assets/icons/bricks.svg',
     },
     {
-      routerLink: '',
+      routerLink: 'userProfile',
       title: 'TITLE.USER_PROFILE',
       src: 'assets/icons/bricks.svg',
     },
@@ -71,5 +71,10 @@ export class SideBarComponent implements OnInit {
     if (window.innerWidth < 450) {
       this.commonService.isOpen = false;
     }
+  }
+
+  onChangeRoute(){
+    if(window.innerWidth < 450)
+    this.commonService.isOpen = !this.commonService.isOpen;
   }
 }
