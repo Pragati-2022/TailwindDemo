@@ -2,12 +2,13 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { LoginComponent } from './pages/login/login.component';
 import { MapsComponent } from './pages/maps/maps.component';
 import { UserProfileComponent } from './pages/user-profile/user-profile.component';
 
 const routes: Routes = [
   {
-    path: '', redirectTo : 'home', pathMatch : 'full'
+    path: '', redirectTo : 'login', pathMatch : 'full'
   },
   {
     path : 'home',
@@ -20,6 +21,10 @@ const routes: Routes = [
   {
     path : 'contactUs',
     component : ContactUsComponent
+  },
+  {
+    path : 'login',
+    component : LoginComponent
   },
   {
     path : 'userProfile',
