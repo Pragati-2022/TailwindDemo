@@ -17,7 +17,7 @@
         <h1 class="text-white text-4xl mt-1 text-center"><img class="inline w-6 h-6"
                 src="assets/icons/algorand-algo.svg" alt="" />{{ 'TITLE.ARGON' | translate }} </h1>
         <div class="text-white text-md mt-5 p-4">
-            <p (click)="commonService.isOpen = !commonService.isOpen" class="mt-2" *ngFor="let item of menu" [routerLink]="item?.routerLink">
+            <p (click)="onChangeRoute()" class="mt-2" *ngFor="let item of menu" [routerLink]="item?.routerLink">
                 <img class="inline w-6 h-6 mr-2" [src]="item?.src" alt="" />{{ item?.title || '-' | translate }}
             </p>
         </div>
