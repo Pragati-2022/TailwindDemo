@@ -1,1 +1,62 @@
-<p>login works!</p>
+<div class="md:bg-gray-300 h-screen flex items-center justify-center">
+    <form [formGroup]="constant.loginForm" class="w-full md:w-3/5 bg-white rounded-lg items-center">
+        <div class="flex font-bold justify-center mt-6">
+            <img class="h-24 w-24" src="assets/images/login/login.jpg">
+        </div>
+        <h2 class="text-3xl text-center text-gray-700 mb-4">Welcome Back!</h2>
+
+        <div class="px-12 pb-10  mt-2">
+            <div class="w-full mb-2">
+                <div class="flex flex-wrap -mx-3">
+                    <div class="w-full px-3"> <label
+                            class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                            for="grid-first-name">
+                            {{ 'LABEL.EMAIL' | translate }}
+                        </label>
+                        <input type='text' formControlName="email" placeholder="{{ 'LABEL.EMAIL' | translate }}"
+                            class="appearance-none block w-full bg-gray-200 rounded py-3 leading-tight focus:bg-white px-4 mt-3 mb-3 w-full border rounded py-2 text-gray-700 focus:outline-none items-center" />
+                        <ng-container *ngFor="let validation of validationMessages.email">
+                            <div class="text-red-500 text-xs italic"
+                                *ngIf="_loginForm['email'].errors?.[validation.type] && (_loginForm['email'].dirty || _loginForm['email'].touched)">
+                                {{ 'LABEL.EMAIL' | translate }} {{ validation.message | translate }}
+                            </div>
+                        </ng-container>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full mb-2">
+                <div class="flex flex-wrap -mx-3">
+                    <div class="w-full px-3">
+                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                            for="grid-first-name">
+                            {{ 'LABEL.PASSWORD' | translate }}
+                        </label>
+                        <input type='password' formControlName="password"
+                            placeholder="{{ 'LABEL.PASSWORD' | translate }}"
+                            class="appearance-none block w-full bg-gray-200 rounded py-3 leading-tight focus:bg-white px-4 mb-3 w-full border rounded py-2 text-gray-700 focus:outline-none items-center" />
+                        <ng-container *ngFor="let validation of validationMessages.password">
+                            <div class="text-red-500 text-xs italic"
+                                *ngIf="_loginForm['password'].errors?.[validation.type] && (_loginForm['password'].dirty || _loginForm['password'].touched)">
+                                {{ 'LABEL.PASSWORD' | translate }} {{ validation.message | translate }}
+                            </div>
+                        </ng-container>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap justify-center">
+                    <button type="submit" (click)="onSubmit()" [disabled]="constant.loginForm.invalid"
+                        class="w-1/3 mt-6 py-2 rounded bg-slate-700 text-white font-bold focus:outline-none rounded disabled:bg-slate-500 ">Log
+                        In</button>
+                </div>
+                <div>
+                    <a href="#"
+                        class="text-xs text-opacity-100 float-right mt-6 mb-4 hover:text-blue-600 underline">Forgot
+                        Password?</a>
+                    <a href="#"
+                        class="text-xs text-opacity-100 float-left mt-6 mb-8 hover:text-blue-600 underline">Create
+                        Account</a>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
