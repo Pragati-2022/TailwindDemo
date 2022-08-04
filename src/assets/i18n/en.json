@@ -3,7 +3,9 @@
     "SEE_ALL": "See All",
     "MONTH": "Month",
     "YEAR": "Year",
-    "SAVE": "Save"
+    "SAVE": "Save",
+    "LOGIN" : "Log In",
+    "GO_TO_HOME" : "Go To Home"
   },
   "TITLE": {
     "ARGON" : "argon",
@@ -23,7 +25,8 @@
     "PAGE_VISITES" : "Page Visites",
     "SOCIAL_TRAFFIC" : "Social Traffic",
     "TOTAL_ORDERS" : "Total Orders",
-    "SALES" : "SALES"
+    "SALES" : "SALES",
+    "WELCOME_BACK" : "Welcome Back!"
   },
 
   "LABEL" : {
@@ -50,6 +53,12 @@
     "EXOERIENCE_MAX_LENGTH" : "length maximum is 2!",
     "EXPERIENCE_MIN" : "is least 1 year!",
     "ZIP_MIN_LENGTH" : "at least 4 characters long!",
-    "ZIP_MAX_LENGTH" : "length maximum is 8!"
+    "ZIP_MAX_LENGTH" : "length maximum is 8!",
+    "SUCCESS_LOGIN" : "Your are successfully loggedIn!!"
+  },
+
+  "LINK" : {
+    "FORGOT_PASSWORD" : "Forgot Password?",
+    "CREATE_ACCOUNT" : "Create Account"
   }
 }
