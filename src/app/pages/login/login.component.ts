@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { ConstantClass } from 'src/app/constants/constants';
 import { CommonService } from 'src/app/services/common/common.service';
 import { Regex } from 'src/app/utils/regex';
-
+import Swal from 'sweetalert2'
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -53,6 +53,12 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit() {
+    Swal.fire({
+      icon: 'success',
+      title: this.commonService.getTranslateData('MESSAGE.SUCCESS_LOGIN'),
+      showConfirmButton: false,
+    })
+
     localStorage.setItem('loggedIn', btoa(this.constant.loginForm.value.email));
     this.router.navigate(['home']);
     this.commonService.isLoggedIn = atob(localStorage.getItem('loggedIn') || '');
