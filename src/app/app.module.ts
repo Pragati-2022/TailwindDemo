@@ -22,6 +22,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { UserProfileComponent } from './pages/user-profile/user-profile.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './pages/login/login.component';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 export function createTranslateLoader(http: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
@@ -39,6 +40,7 @@ export function createTranslateLoader(http: HttpClient): TranslateHttpLoader {
     ContactUsComponent,
     UserProfileComponent,
     LoginComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
