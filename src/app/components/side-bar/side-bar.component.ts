@@ -36,7 +36,7 @@ export class SideBarComponent implements OnInit {
     },
     {
       routerLink: 'login',
-      title: 'TITLE.LOGIN',
+      title: 'TITLE.LOGOUT',
       src: 'assets/icons/bricks.svg',
     },
     {
@@ -74,8 +74,15 @@ export class SideBarComponent implements OnInit {
     }
   }
 
-  onChangeRoute(){
+  onChangeRoute(item : any){
     if(window.innerWidth < 450)
     this.commonService.isOpen = !this.commonService.isOpen;
+
+    if(item.routerLink === 'login'){
+      localStorage.removeItem('loggedIn');
+      this.commonService.isLoggedIn = '';
+      console.log(this.commonService.isLoggedIn);
+      
+    }
   }
 }
