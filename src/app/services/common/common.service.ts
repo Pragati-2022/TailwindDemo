@@ -9,8 +9,13 @@ export class CommonService {
   translation! : string;
   chart: any;
   isMonth = true;
+  isLoggedIn = '';
+  isOnPageNotFound = false;
 
-  constructor(public translateService : TranslateService) { }
+  constructor(public translateService : TranslateService) {
+    this.isLoggedIn = atob(localStorage.getItem('loggedIn') || '');
+    console.log(this.isLoggedIn);  
+   }
 
    getTranslateData(text : string){
     this.translateService.get(text).pipe().subscribe((value) => {
